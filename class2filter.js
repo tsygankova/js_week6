@@ -24,4 +24,10 @@ const offlinePlayers = players.filter (function (player){
     
     console.table (offlinePlayers);
     
-    
+// список хардкорных игроков с временем выше 300
+
+const activePlayers = players.filter (function (player){
+    return player.timePlayed > 300;
+})
+
+console.table (activePlayers)
