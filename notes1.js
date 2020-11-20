@@ -52,3 +52,7 @@ const fifteen = numbers.find (function (element){
 })
 
 console.log (fifteen)
+
+//Array.prototype.every () - если все элементы подходят под критерий, возвращает true
+
+
