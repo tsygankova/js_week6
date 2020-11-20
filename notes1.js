@@ -45,3 +45,10 @@ const filteredNumbers = numbers.filter (function(element){
 
 console.log (filteredNumbers)
 
+//find  - чтобы найти один элемент
+
+const fifteen = numbers.find (function (element){
+  return element === 15;
+})
+
+console.log (fifteen)
