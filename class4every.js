@@ -33,3 +33,11 @@ const isAnyOnline = players.some (function (player){
 })
 
 console.log (isAnyOnline)
+
+//есть ли активные игроки с временем больше 400 часов
+
+const isAnyHardcore = players.some (function (player){
+    return player.timePlayed > 400;
+})
+
+console.log (isAnyHardcore)

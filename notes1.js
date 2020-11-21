@@ -55,4 +55,4 @@ console.log (fifteen)
 
 //Array.prototype.every () - если все элементы подходят под критерий, возвращает true
 
-
+//Array.prototype.some () -  хоть один элемент подходит
