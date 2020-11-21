@@ -19,3 +19,4 @@ const playersSorted = [...players].sort (function(prevPlayer, nextPlayer){
 })
 
 console.table (playersSorted)
+
