@@ -8,10 +8,9 @@
 Используй только перебирающие методы массива которые не изменяют (не мутируют) 
 исходный массив. Т.е. нельзя использовать for, splice, push и т.п. мутирующие методы.*/
 
-const getUsersWithGender = (array, gender) => array.filter (({gender}) => gender === gender).map(({name}) => name)
+const getUsersWithGender = (array, gender) => array.filter (array => array.gender === gender).map(({name}) => name)
 
-console.log(getUsersWithGender(users, 'male'));
-
+// console.log(getUsersWithGender(users, 'm
 const users =  [
     {
       id: '701b29c3-b35d-4cf1-a5f6-8b12b29a5081',
@@ -98,5 +97,7 @@ const users =  [
       age: 39,
     },
   ];
+
+  console.log(getUsersWithGender(users, 'male'));
 
 
