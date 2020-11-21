@@ -1,4 +1,4 @@
-const numbers = [5, 10, 15, 20, 25];
+const numbers = [5, 3 , 12, 6, 18, 9];
 
 //Array.prototype.reduce ()
 
@@ -26,3 +26,35 @@ const totalSalary = salaries.reduce (function (accumulator = 0, salary){
 
 console.log (totalSalary)
 
+
+// Array.prototype.sort - сортирует и ИЗМЕНЯЕТ МАССИВ
+
+numbers.sort ()
+
+console.log (numbers)
+
+numbers.sort (function (prev, next){
+return prev - next;
+})
+
+console.log (numbers)
+
+numbers.sort (function (prev, next){
+    return next - prev;
+})
+
+console.log (numbers)
+
+const letters = ['a', 'A', 'b', 'B']
+
+letters.sort()
+
+console.log (letters)
+
+// копия массива
+
+const copy = numbers.slice();
+console.log (copy);
+
+const copy2 = [...numbers];
+console.log (copy2)

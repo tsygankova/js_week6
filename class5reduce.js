@@ -70,6 +70,7 @@ const tagStats = allTags.reduce (function (acc, tag){
     // acc[tag] = acc.hasOwnProperty(tag) ? acc[tag] + 1 : 1;
     // return acc;
 
+    // чистая функция, но медленная (распыление медленное)
     return {
         ...acc,
         [tag]: acc.hasOwnProperty(tag) ? acc[tag] + 1 : 1
@@ -77,3 +78,14 @@ const tagStats = allTags.reduce (function (acc, tag){
 }, {})
 
 console.log (tagStats)
+
+// reduce своими руками
+
+Array.prototype.reduce = function (callback, initialValue = this[0]){
+    let accumulator = initialValue;
+
+    for (let i = 0; i < this.length; i +=1){
+        accumulator = callback (this [i], i, this);
+       }
+return accumulator
+    }
