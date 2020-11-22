@@ -91,7 +91,7 @@ const users =  [
 которые попадают в возрастную категорию от min до max лет (значение свойства age).*/
 
 const getUsersWithAge = (array, min, max) => array
- .filter(({age}) => max > age && age > min)   
- .map(({name, email}) => ({[name]: email}));  
+ .filter(({age}) => max >= age && age >= min)   
+ .map(({name, email}) => ({['name']: name,['email']: email}));  
 
 console.log(getUsersWithAge(users, 20, 30));
