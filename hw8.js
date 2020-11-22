@@ -105,6 +105,10 @@ filter, includes и map
 // console.log(getUsersWithFriend(users, 'Goldie Gentry'));
 // // [ 'Elma Head', 'Sheree Anthony' ]
 
+// без присваивания
+const getUsersWithFriend = (array, friendName) => array.filter (array => array.friends.includes(friendName)).map(({name}) => name)
+
+// c присваиванием 
 const getUsersWithFriend = (array, friendName) => array.filter (({friends}) => friends.includes(friendName)).map(({name}) => name)
 
 console.log(getUsersWithFriend(users, 'Briana Decker'));
