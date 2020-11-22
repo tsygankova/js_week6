@@ -95,8 +95,7 @@ const users =  [
     },
   ];
 
-
-const calculateTotalBalance = array => array.reduce ((acc, {balance}) => acc + array.balance);
+  const calculateTotalBalance = array => array.reduce ((acc, {balance}) => acc +=balance,0);
 
 const knowTotalBalance = users.reduce(function(acc, user){
 return acc + user.balance
